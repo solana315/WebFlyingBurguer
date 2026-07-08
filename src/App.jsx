@@ -309,7 +309,7 @@ export default function App() {
                 Flying Burguer
               </div>
               <p className="text-secondary" style={{ maxWidth: 260 }}>
-                Uma rulote, três espécies de clientes e nenhuma paciência a perder. Feito para jogar em qualquer pausa.
+                Uma rulote, três espécies de clientes e nenhuma paciência a perder. Feito para jogar em qualquer tempo livre.
               </p>
             </div>
             <div>
@@ -323,9 +323,11 @@ export default function App() {
             <div>
               <h4>Comunidade</h4>
               <ul className="list-unstyled">
-                <li><a href="#" className="text-secondary text-decoration-none">Discord</a></li>
-                <li><a href="#" className="text-secondary text-decoration-none">Novidades</a></li>
-                <li><a href="#" className="text-secondary text-decoration-none">Suporte</a></li>
+                <li><a  className="text-secondary text-decoration-none">Ana Oliveira | pv25412</a></li>
+                <li><a  className="text-secondary text-decoration-none">Inês Saraiva | pv27649</a></li>
+                <li><a  className="text-secondary text-decoration-none">Gustavo Nunes | pv28693</a></li>
+                <li><a  className="text-secondary text-decoration-none">Ivan Marques | pv27643</a></li>
+                <li><a  className="text-secondary text-decoration-none">João Lopes | pv27637</a></li>
               </ul>
             </div>
             <div>
