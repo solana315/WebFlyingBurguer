@@ -80,6 +80,36 @@ function Cloud({ className, style }) {
 
 export default function App() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [headerImage, setHeaderImage] = useState(() => {
+    try {
+      return localStorage.getItem('headerImage') || menu
+    } catch (e) {
+      return menu
+    }
+  })
+
+  function handleFileChange(e) {
+    const file = e.target.files && e.target.files[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = (ev) => {
+      const dataUrl = ev.target.result
+      try {
+        localStorage.setItem('headerImage', dataUrl)
+      } catch (err) {
+        console.warn('Could not save image to localStorage', err)
+      }
+      setHeaderImage(dataUrl)
+    }
+    reader.readAsDataURL(file)
+  }
+
+  function resetHeaderImage() {
+    try {
+      localStorage.removeItem('headerImage')
+    } catch (e) {}
+    setHeaderImage(menu)
+  }
 
   return (
     <>
@@ -114,22 +144,17 @@ export default function App() {
               <p className="lead text-white-75 mb-4">Faz os hambúrgueres mais deliciosos dos céus e entrega-os aos clientes mais exigentes — as aves! Mas atenção: há um segredo escondido nos ingredientes que só será revelado no último nível...</p>
               <div className="d-flex flex-wrap gap-3">
                 <a href="#historia" className="btn btn-warning btn-lg px-4 text-dark">Jogar Agora</a>
-                <a href="#trailer" className="btn btn-outline-light btn-lg px-4 text-dark border-2">Ver Trailer</a>
+                <a href="#historia" className="btn btn-warning btn-light px-4 text-dark">Ver Trailer</a>
               </div>
             </div>
-            <div className="col-lg-5 offset-lg-1">
               <div className="art-card mx-auto">
-                <div className="art-frame position-relative">
-                  <div className="art-content text-start text-dark">
-                    <h2 className="fw-bold mb-3">Flying Burguer</h2>
-                    <div className="d-flex flex-column gap-3">
-                      <span className="btn btn-sm btn-light text-dark rounded-pill px-4">Começar</span>
-                      <span className="btn btn-sm btn-light text-dark rounded-pill px-4">Opções</span>
-                      <span className="btn btn-sm btn-light text-dark rounded-pill px-4">Créditos</span>
+                <div className="art-frame position-relative" style={{ backgroundImage: `url(${headerImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                  <div className="art-content text-start text-white">
+                    <div className="d-flex flex-wrap gap-2">
+                        <input type="file" accept="image/*" onChange={handleFileChange} style={{ display: 'none' }} />
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
