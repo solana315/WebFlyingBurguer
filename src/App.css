@@ -99,6 +99,11 @@ button{font-family:inherit;cursor:pointer;border:none;}
   font-size:24px;
   margin-bottom:18px;
 }
+.feature-icon-img{
+  width:32px;
+  height:32px;
+  object-fit:contain;
+}
 
 .step-card{
   border-radius:30px;

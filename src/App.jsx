@@ -2,25 +2,29 @@ import { useState } from 'react'
 import menu from './assets/menu.jpeg'
 import montagem from './assets/montagem.jpeg'
 import incio from './assets/incio.jpeg'
+import SearchAlt from './assets/Search_alt.png'
+import Vector from './assets/Vector.png'
+import burger from './assets/burger.png'
+import Angry from './assets/Angry.png'
 
 const features = [
   {
-    icon: '🍳',
+    icon: <img src={burger} alt="Cozinha Caótica icon" className="feature-icon-img" />,
     title: 'Cozinha Caótica',
     text: 'Prepara hambúrgueres em tempo real numa cozinha 3D totalmente interativa. Cada ingrediente conta!'
   },
   {
-    icon: '🦉',
+    icon: <img src={Angry} alt="Clientes Alados icon" className="feature-icon-img" />,
     title: 'Clientes Alados',
     text: 'As aves chegam ao balcão com pedidos específicos. A sua paciência diminui a cada nível — não as faças esperar!'
   },
   {
-    icon: '⚡',
+    icon: <img src={Vector} alt="Velocidade icon" className="feature-icon-img" />,
     title: 'Velocidade Crescente',
     text: 'Cada nível é mais frenético que o anterior. Consegues sobreviver ao caos do Nível 3?'
   },
   {
-    icon: '🔍',
+    icon: <img src={SearchAlt} alt="Search icon" className="feature-icon-img" />,
     title: 'Um Segredo Sombrio',
     text: 'Há algo nos ingredientes que as aves não sabem... Chega ao nível final para descobrires a verdade.'
   }
@@ -227,9 +231,8 @@ export default function App() {
                 <span className="badge rounded-pill bg-light text-dark py-2 px-3">WASD</span>
                 <span className="badge rounded-pill bg-light text-dark py-2 px-3">Mouse</span>
                 <span className="badge rounded-pill bg-light text-dark py-2 px-3">E</span>
-                <span className="badge rounded-pill bg-light text-dark py-2 px-3">Espaço</span>
               </div>
-              <div className="text-secondary">Mover o personagem · Olhar à volta · Interagir com objetos · Saltar</div>
+              <div className="text-secondary">Mover o personagem · Olhar à volta · Interagir com objetos</div>
             </div>
           </div>
         </div>
