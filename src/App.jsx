@@ -1,64 +1,76 @@
 import { useState } from 'react'
+import menu from './assets/menu.jpeg'
+import montagem from './assets/montagem.jpeg'
+import incio from './assets/incio.jpeg'
 
 const features = [
   {
-    icon: '🧭',
-    title: 'A rulote é tua',
-    text: 'Escolhe o balcão, organiza a bancada e decide como recebes cada cliente que pousa.'
+    icon: '🍳',
+    title: 'Cozinha Caótica',
+    text: 'Prepara hambúrgueres em tempo real numa cozinha 3D totalmente interativa. Cada ingrediente conta!'
   },
   {
-    icon: '🍞',
-    title: '12 receitas base',
-    text: 'Do burger simples ao especial voador — cada pedido é uma combinação diferente de ingredientes.'
+    icon: '🦉',
+    title: 'Clientes Alados',
+    text: 'As aves chegam ao balcão com pedidos específicos. A sua paciência diminui a cada nível — não as faças esperar!'
   },
   {
-    icon: '⏱️',
-    title: 'A paciência conta',
-    text: 'Cada ave tem o seu próprio limite. Demoraste demais? Vai-se embora e leva pontos contigo.'
+    icon: '⚡',
+    title: 'Velocidade Crescente',
+    text: 'Cada nível é mais frenético que o anterior. Consegues sobreviver ao caos do Nível 3?'
   },
   {
-    icon: '🛎️',
-    title: 'Menus e extras',
-    text: 'Batatas, bebida ou os dois — serve o tabuleiro completo para os clientes mais exigentes.'
+    icon: '🔍',
+    title: 'Um Segredo Sombrio',
+    text: 'Há algo nos ingredientes que as aves não sabem... Chega ao nível final para descobrires a verdade.'
   }
 ]
 
 const steps = [
   {
     icon: '🐦',
-    title: 'Recebe a pedida',
-    text: 'O cliente pousa no balcão e mostra o pedido acima da cabeça. Lê bem antes de correr para a bancada.'
+    title: 'Recebe o Pedido',
+    text: 'Olha para o painel de PEDIDOS no canto superior direito. A ave cliente mostra o que quer — pão, hambúrguer, alface, tomate e muito mais.',
+    img: menu
   },
   {
-    icon: '🥬',
-    title: 'Prepara o hambúrguer',
-    text: 'Empilha pão, carne e os extras certos. A ordem dos ingredientes é o que separa um cliente feliz de um faminto.'
+    icon: '🍔',
+    title: 'Prepara na Cozinha',
+    text: 'Usa os equipamentos da cozinha para grelhar a carne, montar o hambúrguer na ordem certa e preparar os ingredientes a tempo. Cada segundo conta!',
+    img: montagem
   },
   {
-    icon: '✈️',
-    title: 'Entrega e vê-o partir',
-    text: 'Serve o tabuleiro certo antes do tempo acabar. Acertaste? Ele come, comenta e levanta voo satisfeito.'
+    icon: '🕊️',
+    title: 'Entrega à Ave',
+    text: 'Serve o hambúrguer ao cliente antes que a paciência dele acabe! No Nível 3 as aves ficam extremamente impacientes... e a verdade vem à tona.',
+    img: incio
   }
 ]
 
 const tiers = [
   {
-    medal: '🥉',
+    icon: '😊',
+    level: 'NÍVEL 1',
     title: 'O Começo Tranquilo',
-    text: 'Um cliente de cada vez, tempo de sobra e receitas simples. Aqui aprendes a bancada de olhos fechados.',
-    highlight: false
+    text: 'As aves chegam com calma e os pedidos são simples. Aprende os controlos, ganha confiança na cozinha e começa a entregar hambúrgueres aos clientes. Tudo parece normal por aqui...',
+    progress: 1,
+    tierClass: 'level-1'
   },
   {
-    medal: '🥈',
+    icon: '😰',
+    level: 'NÍVEL 2',
     title: 'A Pressão Aumenta',
-    text: 'Bandos maiores, menus completos e clientes que já não perdoam hesitações. É aqui que a rotina se prova.',
-    highlight: false
+    text: 'Os pedidos ficam mais complexos e as aves já não têm tanta paciência. A cozinha acelera — tens de ser mais rápido e mais preciso para sobreviver ao rush.',
+    progress: 2,
+    tierClass: 'level-2'
   },
   {
-    medal: '🏆',
-    title: 'A Rulote Lendária',
-    text: 'Fila constante, todas as combinações possíveis e zero margem de erro. Chega aqui e o teu nome fica no balcão.',
-    highlight: true
+    icon: '😱',
+    level: 'NÍVEL 3',
+    title: 'A Verdade Revelada',
+    text: 'Velocidade máxima. Paciência mínima. E quando chegas ao fim... descobre-se o ingrediente secreto dos hambúrgueres. Será que as aves vão gostar de saber o que andaram a comer?',
+    progress: 3,
+    tierClass: 'level-3'
   }
 ]
 
@@ -71,251 +83,232 @@ export default function App() {
 
   return (
     <>
-      <header>
-        <nav className="nav">
-          <div className="logo">
-            <span className="badge">🍔</span> Flying Burguer
+      <header className="sticky-top bg-white shadow-sm border-bottom">
+        <div className="container-xl d-flex align-items-center justify-content-between py-3">
+          <a href="#historia" className="d-flex align-items-center gap-3 navbar-brand mb-0 text-warning fw-bold fs-4">
+            <span className="badge rounded-3 bg-warning text-dark border border-2 border-dark">🍔</span>
+            Flying Burguer
+          </a>
+          <div className="d-flex align-items-center gap-3 flex-wrap">
+            <nav className="nav d-none d-lg-flex align-items-center gap-3">
+              <a className="nav-link px-2 text-dark" href="#historia">Início</a>
+              <a className="nav-link px-2 text-dark" href="#historia">Sobre o Jogo</a>
+              <a className="nav-link px-2 text-dark" href="#passos">Como Jogar</a>
+              <a className="nav-link px-2 text-dark" href="#trailer">Vídeo</a>
+              <a className="nav-link px-2 text-dark" href="#equipa">Equipa</a>
+            </nav>
+            <a href="#historia" className="btn btn-warning btn-sm text-dark px-4">Jogar Agora</a>
           </div>
-          <div className="nav-links">
-            <a href="#historia">Sobre o jogo</a>
-            <a href="#passos">Como se joga</a>
-            <a href="#progressao">Progressão</a>
-            <a href="#trailer">Trailer</a>
-          </div>
-          <div className="nav-actions">
-            <a href="#" className="btn btn-ghost">Entrar</a>
-            <a href="#" className="btn btn-solid">Criar conta</a>
-          </div>
-        </nav>
+        </div>
       </header>
 
-      <section className="hero">
+      <section className="hero position-relative overflow-hidden">
         <Cloud className="cloud1" />
         <Cloud className="cloud2" />
         <Cloud className="cloud3" />
-        <div className="wrap hero-grid">
-          <div>
-            <span className="eyebrow">🐦 Novo — modo Bando Faminto</span>
-            <h1>Serve rápido.<br />Voa mais <span>alto</span>.</h1>
-            <p className="lede">
-              Gere a rulote mais movimentada da baía. Clientes com asas — tucanos, araras e
-              gaivotas — pousam com fome e pouca paciência. Monta o hambúrguer certo antes que
-              levantem voo outra vez.
-            </p>
-            <div className="hero-ctas">
-              <a href="#" className="btn btn-solid large">▶ Jogar agora</a>
-              <a href="#trailer" className="btn btn-outline-light">Ver trailer</a>
-            </div>
-          </div>
-          <div className="hero-art">
-            <div className="art-card">
-              <div className="art-frame">
-                🦜
-                <span className="tag">Cheeseburger pronto!</span>
+        <div className="container-xl py-5">
+          <div className="row align-items-center gy-5">
+            <div className="col-lg-6">
+              <span className="badge rounded-pill bg-warning text-dark px-3 py-2 mb-4">Demo</span>
+              <h1 className="display-1 fw-bold text-white lh-sm">FLYING<br />BURGUER</h1>
+              <p className="lead text-white-75 mb-4">Faz os hambúrgueres mais deliciosos dos céus e entrega-os aos clientes mais exigentes — as aves! Mas atenção: há um segredo escondido nos ingredientes que só será revelado no último nível...</p>
+              <div className="d-flex flex-wrap gap-3">
+                <a href="#historia" className="btn btn-warning btn-lg px-4 text-dark">Jogar Agora</a>
+                <a href="#trailer" className="btn btn-outline-light btn-lg px-4 text-dark border-2">Ver Trailer</a>
               </div>
             </div>
-            <div className="art-badge">
-              <strong>+250</strong>
-              <span>pontos</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="historia">
-        <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">A premissa</span>
-            <h2>Uma história servida com hambúrguer</h2>
-            <p>
-              A rulote da baía nunca fechou — só mudou de clientela. Cada dia traz um bando
-              novo, uma fila mais comprida e uma razão para não deixares ninguém de bico
-              fechado.
-            </p>
-          </div>
-          <div className="grid-4">
-            {features.map((f) => (
-              <div className="feature-card" key={f.title}>
-                <div className="feature-icon">{f.icon}</div>
-                <h3>{f.title}</h3>
-                <p>{f.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="passos" style={{ background: 'var(--cream-deep)' }}>
-        <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">O ciclo de jogo</span>
-            <h2>3 passos para o hambúrguer perfeito</h2>
-            <p>
-              Cada cliente segue a mesma rota — do céu ao balcão e de volta. O que muda é o
-              que lhe entregas a meio do caminho.
-            </p>
-          </div>
-          <div className="steps-wrap">
-            <svg
-              className="flight-path"
-              viewBox="0 0 1000 40"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M60,20 Q500,-30 940,20"
-                fill="none"
-                stroke="#eda33b"
-                strokeWidth="3"
-                strokeDasharray="2 14"
-                strokeLinecap="round"
-              />
-            </svg>
-            <div className="grid-3">
-              {steps.map((s, i) => (
-                <div className="step-card" key={s.title}>
-                  <div className="step-shot">
-                    {s.icon}
-                    <span className="step-num">{i + 1}</span>
-                  </div>
-                  <div className="step-body">
-                    <h3>{s.title}</h3>
-                    <p>{s.text}</p>
+            <div className="col-lg-5 offset-lg-1">
+              <div className="art-card mx-auto">
+                <div className="art-frame position-relative">
+                  <div className="art-content text-start text-dark">
+                    <h2 className="fw-bold mb-3">Flying Burguer</h2>
+                    <div className="d-flex flex-column gap-3">
+                      <span className="btn btn-sm btn-light text-dark rounded-pill px-4">Começar</span>
+                      <span className="btn btn-sm btn-light text-dark rounded-pill px-4">Opções</span>
+                      <span className="btn btn-sm btn-light text-dark rounded-pill px-4">Créditos</span>
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-          <div className="controls-bar">
-            <span>🎮 Comandos:</span>
-            <span><span className="key">WASD</span> mover-se</span>
-            <span><span className="key">E</span> apanhar / colocar</span>
-            <span><span className="key">Space</span> entregar tabuleiro</span>
           </div>
         </div>
       </section>
 
-      <section id="progressao" className="progress-band">
-        <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">Progressão</span>
-            <h2>Até onde chegas?</h2>
-            <p>
-              A fila cresce a cada dia servido. Estes são os três marcos que separam quem
-              sobrevive de quem domina a rulote.
+      <section id="historia" className="py-5">
+        <div className="container-xl">
+          <div className="text-center mb-5">
+            <span className="badge rounded-pill bg-warning text-dark mb-3">SOBRE O JOGO</span>
+            <h2 className="fw-bold">Uma história servida com hambúrguer</h2>
+            <p className="text-secondary mx-auto" style={{ maxWidth: '660px' }}>
+              Flying Burguer é um jogo de culinária acelerado onde trabalhas como cozinheiro num food truck voador. Os teus únicos clientes? Aves que pousam no balcão com pedidos na mão. Tudo parece normal... até ao Nível 3.
             </p>
           </div>
-          <div className="tier-grid">
-            {tiers.map((t) => (
-              <div
-                className={`tier-card${t.highlight ? ' highlight' : ''}`}
-                key={t.title}
-              >
-                <div className="tier-medal">{t.medal}</div>
-                <h3>{t.title}</h3>
-                <p>{t.text}</p>
+          <div className="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+            {features.map((f) => (
+              <div className="col" key={f.title}>
+                <div className="card h-100 shadow-sm border-0 rounded-4">
+                  <div className="card-body">
+                    <div className="d-inline-flex align-items-center justify-content-center mb-3 rounded-3 feature-icon">
+                      {f.icon}
+                    </div>
+                    <h3 className="h5 fw-bold">{f.title}</h3>
+                    <p className="text-secondary mb-0">{f.text}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="trailer" className="video-section">
-        <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">Vê antes de jogar</span>
-            <h2>Vê o jogo em ação</h2>
-            <p>Dois minutos de fila cheia, pedidos trocados e um final por segundos.</p>
+      <section id="passos" className="py-5 bg-sky position-relative overflow-hidden">
+        <div className="container-xl">
+          <div className="text-center mb-5">
+            <span className="badge rounded-pill bg-info bg-opacity-75 text-dark mb-3">COMO JOGAR?</span>
+            <h2 className="fw-bold">3 passos para o hambúrguer perfeito</h2>
+            <p className="text-secondary mx-auto" style={{ maxWidth: '680px' }}>
+              Cada cliente segue a mesma rota — do céu ao balcão e de volta. O que muda é o que lhe entregas a meio do caminho.
+            </p>
           </div>
-          <div className="video-frame">
+          <div className="row row-cols-1 row-cols-md-3 g-4 position-relative">
+            <svg className="flight-path position-absolute" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M60,20 Q500,-30 940,20" fill="none" stroke="#eda33b" strokeWidth="3" strokeDasharray="2 14" strokeLinecap="round" />
+            </svg>
+            {steps.map((s, i) => (
+              <div className="col" key={s.title}>
+                <div className="card h-100 rounded-4 shadow-sm border-0 step-card overflow-hidden">
+                  <div className="step-shot position-relative">
+                    <img src={s.img} alt={s.title} className="w-100 h-100" />
+                    <span className="step-num">{i + 1}</span>
+                  </div>
+                  <div className="card-body">
+                    <h3 className="h5 fw-bold">{s.title}</h3>
+                    <p className="text-secondary mb-0">{s.text}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="controls-bar mt-5 p-4 rounded-5 bg-white shadow-sm">
+            <div className="d-flex flex-column flex-md-row align-items-center gap-3">
+              <div className="d-flex align-items-center gap-3">
+                <span className="fs-4">🎮</span>
+                <div>
+                  <h6 className="mb-1 fw-bold">Controles</h6>
+                </div>
+              </div>
+              <div className="d-flex flex-wrap gap-2 text-secondary">
+                <span className="badge rounded-pill bg-light text-dark py-2 px-3">WASD</span>
+                <span className="badge rounded-pill bg-light text-dark py-2 px-3">Mouse</span>
+                <span className="badge rounded-pill bg-light text-dark py-2 px-3">E</span>
+                <span className="badge rounded-pill bg-light text-dark py-2 px-3">Espaço</span>
+              </div>
+              <div className="text-secondary">Mover o personagem · Olhar à volta · Interagir com objetos · Saltar</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="progressao" className="py-5 bg-light">
+        <div className="container-xl">
+          <div className="text-center mb-5">
+            <span className="badge rounded-pill bg-warning text-dark mb-3">OS NÍVEIS</span>
+            <h2 className="fw-bold">Até onde chegas? 🏆</h2>
+            <p className="text-secondary mx-auto" style={{ maxWidth: '720px' }}>
+              A fila cresce a cada dia servido. Estes são os três marcos que separam quem sobrevive de quem domina a rulote.
+            </p>
+          </div>
+          <div className="row row-cols-1 row-cols-md-3 g-4">
+            {tiers.map((t) => (
+              <div className="col" key={t.title}>
+                <div className={`card h-100 rounded-4 shadow-sm border-4 ${t.tierClass}`}>
+                  <div className="card-body">
+                    <div className="d-flex align-items-center gap-3 tier-header mb-3">
+                      <div className="tier-icon">{t.icon}</div>
+                      <span className="text-uppercase fw-bold small text-warning">{t.level}</span>
+                    </div>
+                    <h3 className="h5 fw-bold">{t.title}</h3>
+                    <p className="text-secondary mb-4">{t.text}</p>
+                    <div className="patience-group">
+                      <span className="text-uppercase small fw-bold text-secondary">Paciência das aves</span>
+                      <div className="patience-bar mt-2">
+                        {[1, 2, 3].map((step) => (
+                          <span key={step} className={`patience-step${step <= t.progress ? ' filled' : ''}`} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="trailer" className="py-5">
+        <div className="container-xl">
+          <div className="text-center mb-5">
+            <span className="badge rounded-pill bg-warning text-dark mb-3">VÍDEO</span>
+            <h2 className="fw-bold">Vê o jogo em ação 🎬</h2>
+            <p className="text-secondary mx-auto" style={{ maxWidth: '680px' }}>
+              Vê o trailer oficial de Flying Burguer e descobre o caos delicioso que te espera nos céus!
+            </p>
+          </div>
+          <div className="video-frame mx-auto">
             {isPlaying ? (
-              <video
-                className="video-el"
-                controls
-                autoPlay
-                src="/trailer.mp4"
-                poster="/trailer-poster.jpg"
-              >
+              <video className="video-el" controls autoPlay src="/trailer.mp4" poster="/trailer-poster.jpg">
                 O teu navegador não suporta vídeo HTML5.
               </video>
             ) : (
-              <>
-                <Cloud className="cloud3" style={{ top: '10%', left: '8%' }} />
-                <Cloud className="cloud3" style={{ top: '65%', right: '10%' }} />
-                <button
-                  className="play-btn"
-                  aria-label="Reproduzir trailer"
-                  onClick={() => setIsPlaying(true)}
-                >
-                  ▶
-                </button>
-                <span className="video-caption">Trailer oficial · 2:04</span>
-              </>
+              <button className="play-btn" aria-label="Reproduzir trailer" onClick={() => setIsPlaying(true)}>
+                ▶
+              </button>
             )}
           </div>
-          <p className="video-hint">
-            Substitui <code>/public/trailer.mp4</code> e <code>/public/trailer-poster.jpg</code>{' '}
-            pelo teu vídeo real.
-          </p>
         </div>
       </section>
 
-      <section style={{ paddingTop: 0 }}>
-        <div className="cta-strip">
-          <div>
-            <h2>A fila já está a formar-se.</h2>
-            <p>Joga grátis no browser — sem downloads, sem esperar.</p>
-          </div>
-          <a
-            href="#"
-            className="btn btn-outline-light"
-            style={{ background: '#fff', color: 'var(--toast)', borderColor: '#fff' }}
-          >
-            Jogar agora
-          </a>
-        </div>
-      </section>
-
-      <footer>
-        <div className="wrap">
+      <footer className="py-5">
+        <div className="container-xl">
           <div className="footer-grid">
             <div>
-              <div className="logo" style={{ color: '#fff', marginBottom: 14 }}>
-                <span className="badge">🍔</span> Flying Burguer
+              <div className="d-flex align-items-center gap-3 mb-3 text-white fw-bold fs-5">
+                <span className="badge rounded-3 bg-warning text-dark">🍔</span>
+                Flying Burguer
               </div>
-              <p style={{ fontSize: 14, lineHeight: 1.6, maxWidth: 260 }}>
-                Uma rulote, três espécies de clientes e nenhuma paciência a perder. Feito
-                para jogar em qualquer pausa.
+              <p className="text-secondary" style={{ maxWidth: 260 }}>
+                Uma rulote, três espécies de clientes e nenhuma paciência a perder. Feito para jogar em qualquer pausa.
               </p>
             </div>
             <div>
               <h4>Jogo</h4>
-              <ul>
-                <li><a href="#historia">Sobre o jogo</a></li>
-                <li><a href="#passos">Como se joga</a></li>
-                <li><a href="#progressao">Progressão</a></li>
+              <ul className="list-unstyled">
+                <li><a href="#historia" className="text-secondary text-decoration-none">Sobre o jogo</a></li>
+                <li><a href="#passos" className="text-secondary text-decoration-none">Como se joga</a></li>
+                <li><a href="#progressao" className="text-secondary text-decoration-none">Progressão</a></li>
               </ul>
             </div>
             <div>
               <h4>Comunidade</h4>
-              <ul>
-                <li><a href="#">Discord</a></li>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Suporte</a></li>
+              <ul className="list-unstyled">
+                <li><a href="#" className="text-secondary text-decoration-none">Discord</a></li>
+                <li><a href="#" className="text-secondary text-decoration-none">Novidades</a></li>
+                <li><a href="#" className="text-secondary text-decoration-none">Suporte</a></li>
               </ul>
             </div>
             <div>
               <h4>Legal</h4>
-              <ul>
-                <li><a href="#">Termos</a></li>
-                <li><a href="#">Privacidade</a></li>
-                <li><a href="#">Contactos</a></li>
+              <ul className="list-unstyled">
+                <li><a href="#" className="text-secondary text-decoration-none">Termos</a></li>
+                <li><a href="#" className="text-secondary text-decoration-none">Privacidade</a></li>
+                <li><a href="#" className="text-secondary text-decoration-none">Contactos</a></li>
               </ul>
             </div>
           </div>
-          <div className="footer-bottom">
-            <span>© 2026 Flying Burguer. Todos os direitos reservados.</span>
-            <span>Feito com 🍞 e muita paciência (a nossa, não a dos clientes).</span>
+          <div className="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-3 mt-4 pt-4 border-top border-secondary">
+            <span className="text-secondary">© 2026 Flying Burguer. Todos os direitos reservados.</span>
+            <span className="text-secondary">Feito com 🍞 e muita paciência (a nossa, não a dos clientes).</span>
           </div>
         </div>
       </footer>
