@@ -8,7 +8,7 @@ import burger from './assets/burger.png'
 import Angry from './assets/Angry.png'
 import n1 from './assets/n1.png'
 import n2 from './assets/n2.png'
-import n3 from './assets/n3.png'
+import Wow from './assets/Wow.png'
 
 const features = [
   {
@@ -72,7 +72,7 @@ const tiers = [
     tierClass: 'level-2'
   },
   {
-    icon: <img src={n3} alt="Nivel1 icon" className="feature-icon-img" />,
+    icon: <img src={Wow} alt="Nivel1 icon" className="feature-icon-img" />,
     level: 'NÍVEL 3',
     title: 'A Verdade Revelada',
     text: 'Velocidade máxima. Paciência mínima. E quando chegas ao fim... descobre-se o ingrediente secreto dos hambúrgueres. Será que as aves vão gostar de saber o que andaram a comer?',
