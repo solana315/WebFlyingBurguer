@@ -323,8 +323,8 @@ export default function App() {
             <div>
               <h4>Comunidade</h4>
               <ul className="list-unstyled">
-                <li><a  className="text-secondary text-decoration-none">Ana Oliveira | pv25412</a></li>
-                <li><a  className="text-secondary text-decoration-none">Inês Saraiva | pv27649</a></li>
+                <li><a  className="text-secondary text-decoration-none">Ana Oliveira | pv27649</a></li>
+                <li><a  className="text-secondary text-decoration-none">Inês Saraiva | pv25412</a></li>
                 <li><a  className="text-secondary text-decoration-none">Gustavo Nunes | pv28693</a></li>
                 <li><a  className="text-secondary text-decoration-none">Ivan Marques | pv27643</a></li>
                 <li><a  className="text-secondary text-decoration-none">João Lopes | pv27637</a></li>
