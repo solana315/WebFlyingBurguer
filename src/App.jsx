@@ -6,6 +6,9 @@ import SearchAlt from './assets/Search_alt.png'
 import Vector from './assets/Vector.png'
 import burger from './assets/burger.png'
 import Angry from './assets/Angry.png'
+import n1 from './assets/n1.png'
+import n2 from './assets/n2.png'
+import n3 from './assets/n3.png'
 
 const features = [
   {
@@ -53,7 +56,7 @@ const steps = [
 
 const tiers = [
   {
-    icon: '😊',
+    icon: <img src={n1} alt="Nivel1 icon" className="feature-icon-img" />,
     level: 'NÍVEL 1',
     title: 'O Começo Tranquilo',
     text: 'As aves chegam com calma e os pedidos são simples. Aprende os controlos, ganha confiança na cozinha e começa a entregar hambúrgueres aos clientes. Tudo parece normal por aqui...',
@@ -61,7 +64,7 @@ const tiers = [
     tierClass: 'level-1'
   },
   {
-    icon: '😰',
+    icon: <img src={n2} alt="Nivel1 icon" className="feature-icon-img" />,
     level: 'NÍVEL 2',
     title: 'A Pressão Aumenta',
     text: 'Os pedidos ficam mais complexos e as aves já não têm tanta paciência. A cozinha acelera — tens de ser mais rápido e mais preciso para sobreviver ao rush.',
@@ -69,7 +72,7 @@ const tiers = [
     tierClass: 'level-2'
   },
   {
-    icon: '😱',
+    icon: <img src={n3} alt="Nivel1 icon" className="feature-icon-img" />,
     level: 'NÍVEL 3',
     title: 'A Verdade Revelada',
     text: 'Velocidade máxima. Paciência mínima. E quando chegas ao fim... descobre-se o ingrediente secreto dos hambúrgueres. Será que as aves vão gostar de saber o que andaram a comer?',
