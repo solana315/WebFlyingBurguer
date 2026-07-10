@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import menu from './assets/menu.jpeg'
+import Posterr from './assets/Posterr.png'
 import flyingburguer from './assets/flyingburguer.png'
 import Equipa from './components/Equipa'
 import Historia from './components/Historia'
@@ -14,9 +14,9 @@ function Cloud({ className, style }) {
 export default function App() {
   const [headerImage, setHeaderImage] = useState(() => {
     try {
-      return localStorage.getItem('headerImage') || menu
+      return localStorage.getItem('headerImage') || Posterr
     } catch (e) {
-      return menu
+      return Posterr
     }
   })
 
@@ -40,7 +40,7 @@ export default function App() {
     try {
       localStorage.removeItem('headerImage')
     } catch (e) {}
-    setHeaderImage(menu)
+    setHeaderImage(Posterr)
   }
 
   return (
