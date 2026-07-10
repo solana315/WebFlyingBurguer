@@ -9,7 +9,7 @@ const team = [
   {
     name: 'Ana Oliveira',
     role: 'Desenvolvimento Web, Unity 3D e Modelação 3D',
-    description: 'Responsável pela criação do website publicitário do Jogo, modelação dos personagens 3D e a sua animação e impleentação no Unity.',
+    description: 'Responsável pela criação do website publicitário do Jogo, modelação 3D de alguns personagens no blender e a sua animação e impleentação no Unity.',
     photo: Ana
   },
   {
@@ -21,7 +21,7 @@ const team = [
   {
     name: 'Gustavo Nunes',
     role: 'Modelação 3D',
-    description: 'Desenvolvimento das animações e movimentos 3D de personagens no blender.',
+    description: 'Desenvolvimento das animações e movimentos 3D de alguns personagens no blender.',
     photo: Gustavo
   },
   {
@@ -38,8 +38,8 @@ const team = [
   },
   {
     name: 'Miguel Pereira',
-    role: 'Pesquisa',
-    description: 'Responsável pela procura de assets.',
+    role: 'Pesquisa e modelação 3D',
+    description: 'Responsável pela procura de assets e pela modelação 3D de alguns personagens no blender.',
     photo: Miguel
   }
 ]
