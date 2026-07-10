@@ -39,7 +39,7 @@ const team = [
   {
     name: 'Miguel Pereira',
     role: 'Pesquisa',
-    description: 'Pesquisa de assets.',
+    description: 'Responsável pela procura de assets.',
     photo: Miguel
   }
 ]
