@@ -1,39 +1,46 @@
+import Ana from '../assets/Ana.jpg'
+import Saraiva from '../assets/Saraiva.jpg'
+import Amarante from '../assets/Amarante.jpg'
+import Gustavo from '../assets/Gustavo.jpg'
+import Iban from '../assets/Iban.jpg'
+import Miguel from '../assets/Miguel.jpg'
+
 const team = [
   {
     name: 'Ana Oliveira',
     role: 'Desenvolvimento Web, Unity 3D e Modelação 3D',
     description: 'Responsável pela criação do website publicitário do Jogo, modelação dos personagens 3D e a sua animação e impleentação no Unity.',
-    photo: 'https://ui-avatars.com/api/?name=Ana+Oliveira&background=eda33b&color=fff&size=256'
+    photo: Ana
   },
   {
     name: 'Inês Saraiva',
     role: 'Unity 3D e Efeitos e Implementação',
     description: 'Criação visual do jogo funcional, tanto como os efeitos sonoros e visuais do mesmo e pela implementação no Unity 3D.',
-    photo: 'https://ui-avatars.com/api/?name=Ines+Saraiva&background=eda33b&color=fff&size=256'
+    photo: Saraiva
   },
   {
     name: 'Gustavo Nunes',
     role: 'Modelação 3D',
-    description: 'Desenvolvimento das mecânicas 3D e animações de certos personagens no blender.',
-    photo: 'https://ui-avatars.com/api/?name=Gustavo+Nunes&background=eda33b&color=fff&size=256'
+    description: 'Desenvolvimento das animações e movimentos 3D de personagens no blender.',
+    photo: Gustavo
   },
   {
     name: 'Ivan Marques',
     role: 'Cut Scenes e Trailer',
     description: 'Responsável pela criação das cutscenes e do trailer do jogo que contam a história do jogo.',
-    photo: 'https://ui-avatars.com/api/?name=Ivan+Marques&background=eda33b&color=fff&size=256'
+    photo: Iban
   },
   {
     name: 'João Lopes',
     role: 'Cut Scenes e Trailer',
     description: 'Responsável pela criação das cutscenes e do trailer do jogo que contam a história do jogo.',
-    photo: 'https://ui-avatars.com/api/?name=Joao+Lopes&background=eda33b&color=fff&size=256'
+    photo: Amarante
   },
   {
     name: 'Miguel Pereira',
     role: '',
     description: '',
-    photo: 'https://ui-avatars.com/api/?name=Miguel+Pereira&background=eda33b&color=fff&size=256'
+    photo: Miguel
   }
 ]
 
