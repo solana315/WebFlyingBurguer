@@ -14,7 +14,7 @@ const team = [
   },
   {
     name: 'Inês Saraiva',
-    role: 'Unity 3D e Efeitos e Implementação',
+    role: 'Unity 3D, Efeitos e Implementação',
     description: 'Criação visual do jogo funcional, tanto como os efeitos sonoros e visuais do mesmo e pela implementação no Unity 3D.',
     photo: saraiva
   },
