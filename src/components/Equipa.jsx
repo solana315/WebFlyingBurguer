@@ -1,38 +1,38 @@
 const team = [
   {
     name: 'Ana Oliveira',
-    role: 'Game Design',
-    description: 'Responsável pela mecânica de jogo e progressão de níveis.',
+    role: 'Desenvolvimento Web, Unity 3D e Modelação 3D',
+    description: 'Responsável pela criação do website publicitário do Jogo, modelação dos personagens 3D e a sua animação e impleentação no Unity.',
     photo: 'https://ui-avatars.com/api/?name=Ana+Oliveira&background=eda33b&color=fff&size=256'
   },
   {
     name: 'Inês Saraiva',
-    role: 'Arte & UI',
-    description: 'Criação visual dos personagens e interface do jogo.',
+    role: 'Unity 3D e Efeitos e Implementação',
+    description: 'Criação visual do jogo funcional, tanto como os efeitos sonoros e visuais do mesmo e pela implementação no Unity 3D.',
     photo: 'https://ui-avatars.com/api/?name=Ines+Saraiva&background=eda33b&color=fff&size=256'
   },
   {
     name: 'Gustavo Nunes',
-    role: 'Programação',
-    description: 'Desenvolvimento das mecânicas 3D e interações da cozinha.',
+    role: 'Modelação 3D',
+    description: 'Desenvolvimento das mecânicas 3D e animações de certos personagens no blender.',
     photo: 'https://ui-avatars.com/api/?name=Gustavo+Nunes&background=eda33b&color=fff&size=256'
   },
   {
     name: 'Ivan Marques',
-    role: 'Programação',
-    description: 'Sistemas de pedidos e comportamento dos clientes.',
+    role: 'Cut Scenes e Trailer',
+    description: 'Responsável pela criação das cutscenes e do trailer do jogo que contam a história do jogo.',
     photo: 'https://ui-avatars.com/api/?name=Ivan+Marques&background=eda33b&color=fff&size=256'
   },
   {
     name: 'João Lopes',
-    role: 'Som & Efeitos',
-    description: 'Banda sonora e efeitos sonoros do jogo.',
+    role: 'Cut Scenes e Trailer',
+    description: 'Responsável pela criação das cutscenes e do trailer do jogo que contam a história do jogo.',
     photo: 'https://ui-avatars.com/api/?name=Joao+Lopes&background=eda33b&color=fff&size=256'
   },
   {
     name: 'Miguel Pereira',
-    role: 'Produção',
-    description: 'Coordenação da equipa e planeamento do projeto.',
+    role: '',
+    description: '',
     photo: 'https://ui-avatars.com/api/?name=Miguel+Pereira&background=eda33b&color=fff&size=256'
   }
 ]
