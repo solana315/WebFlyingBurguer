@@ -9,6 +9,7 @@ import Angry from './assets/Angry.png'
 import n1 from './assets/n1.png'
 import n2 from './assets/n2.png'
 import Wow from './assets/Wow.png'
+import flyingburguer from './assets/flyingburguer.png'
 
 const features = [
   {
@@ -123,8 +124,7 @@ export default function App() {
       <header className="sticky-top bg-white shadow-sm border-bottom">
         <div className="container-xl d-flex align-items-center justify-content-between py-3">
           <a href="#historia" className="d-flex align-items-center gap-3 navbar-brand mb-0 text-warning fw-bold fs-4">
-            <span className="badge rounded-3 bg-warning text-dark border border-2 border-dark">🍔</span>
-            Flying Burguer
+            <img src={flyingburguer} alt="Flying Burguer" style={{ height: 45 }} />
           </a>
           <div className="d-flex align-items-center gap-3 flex-wrap">
             <nav className="nav d-none d-lg-flex align-items-center gap-3">
@@ -151,7 +151,7 @@ export default function App() {
               <p className="lead text-white-75 mb-4">Faz os hambúrgueres mais deliciosos dos céus e entrega-os aos clientes mais exigentes — as aves! Mas atenção: há um segredo escondido nos ingredientes que só será revelado no último nível...</p>
               <div className="d-flex flex-wrap gap-3">
                 <a href="#historia" className="btn btn-warning btn-lg px-4 text-dark">Jogar Agora</a>
-                <a href="#historia" className="btn btn-warning btn-light px-4 text-dark">Ver Trailer</a>
+                <a href="#trailer" className="btn btn-warning btn-light px-4 text-dark">Ver Trailer</a>
               </div>
             </div>
               <div className="art-card mx-auto">
@@ -233,7 +233,6 @@ export default function App() {
               <div className="d-flex flex-wrap gap-2 text-secondary">
                 <span className="badge rounded-pill bg-light text-dark py-2 px-3">WASD</span>
                 <span className="badge rounded-pill bg-light text-dark py-2 px-3">Mouse</span>
-                <span className="badge rounded-pill bg-light text-dark py-2 px-3">E</span>
               </div>
               <div className="text-secondary">Mover o personagem · Olhar à volta · Interagir com objetos</div>
             </div>
@@ -309,7 +308,7 @@ export default function App() {
                 Flying Burguer
               </div>
               <p className="text-secondary" style={{ maxWidth: 260 }}>
-                Uma rulote, três espécies de clientes e nenhuma paciência a perder. Feito para jogar em qualquer tempo livre.
+                Uma rulote, quatro espécies de clientes e nenhuma paciência para perder. Feito para jogar em qualquer tempo livre.
               </p>
             </div>
             <div>
@@ -328,6 +327,7 @@ export default function App() {
                 <li><a  className="text-secondary text-decoration-none">Gustavo Nunes | pv28693</a></li>
                 <li><a  className="text-secondary text-decoration-none">Ivan Marques | pv27643</a></li>
                 <li><a  className="text-secondary text-decoration-none">João Lopes | pv27637</a></li>
+                <li><a  className="text-secondary text-decoration-none">Miguel Pereira | pv27634</a></li>
               </ul>
             </div>
             <div>
