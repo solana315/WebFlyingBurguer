@@ -58,7 +58,7 @@ export default function App() {
               <a className="nav-link px-2 text-dark" href="#trailer">Vídeo</a>
               <a className="nav-link px-2 text-dark" href="#equipa">Equipa</a>
             </nav>
-            <a href="https://inessaraiva.itch.io/flyingburgueer" className="btn btn-warning btn-sm text-dark px-4">Jogar Agora</a>
+            <a href="https://inessaraiva.itch.io/flyingburgueer"target="_blank"rel="noopener noreferrer"className="btn btn-warning btn-lg px-4 text-dark">Jogar Agora</a>
           </div>
         </div>
       </header>
@@ -74,7 +74,7 @@ export default function App() {
               <h1 className="display-1 fw-bold text-white lh-sm">FLYING<br />BURGUER</h1>
               <p className="lead text-white-75 mb-4">Faz os hambúrgueres mais deliciosos dos céus e entrega-os aos clientes mais exigentes — as aves! Mas atenção: há um segredo escondido nos ingredientes que só será revelado no último nível...</p>
               <div className="d-flex flex-wrap gap-3">
-                <a href="https://inessaraiva.itch.io/flyingburgueer" className="btn btn-warning btn-lg px-4 text-dark">Jogar Agora</a>
+                <a href="https://inessaraiva.itch.io/flyingburgueer"target="_blank"rel="noopener noreferrer"className="btn btn-warning btn-lg px-4 text-dark">Jogar Agora</a>
                 <a href="#trailer" className="btn btn-warning btn-light px-4 text-dark">Ver Trailer</a>
               </div>
             </div>
