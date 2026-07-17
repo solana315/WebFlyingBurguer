@@ -1,18 +1,18 @@
-import montagem from '../assets/montagem.jpeg'
+import prepara from '../assets/prepara.jpeg'
 import incio from '../assets/incio.jpeg'
-import menu from '../assets/menu.jpeg'
+import pedidos from '../assets/pedidos.jpeg'
 
 
 const steps = [
   {
     title: 'Recebe o Pedido',
     text: 'Olha para o painel de PEDIDOS no canto superior direito. A ave cliente mostra o que quer — pão, hambúrguer, alface, tomate e muito mais.',
-    img: menu
+    img: pedidos
   },
   {
     title: 'Prepara na Cozinha',
     text: 'Usa os equipamentos da cozinha para grelhar a carne, montar o hambúrguer na ordem certa e preparar os ingredientes a tempo. Cada segundo conta!',
-    img: montagem
+    img: prepara
   },
   {
     title: 'Entrega à Ave',
