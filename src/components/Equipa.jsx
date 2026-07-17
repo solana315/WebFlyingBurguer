@@ -26,8 +26,8 @@ const team = [
   },
   {
     name: 'Ivan Marques',
-    role: 'Pesquisa, Cut Scenes e Trailer',
-    description: 'Responsável pela procura de assets usados para a criação do cenário e para o som do jogo pela criação das cutscenes e do trailer do jogo que contam a história do jogo.',
+    role: 'Pesquisa, Cut Scenes e Implementação 3D no Unity',
+    description: 'Responsável pela procura de assets usados para a criação do cenário e para o som do jogo, pela criação das cutscenes e pela implementação de elementos no Unity 3D.',
     photo: Iban
   },
   {
