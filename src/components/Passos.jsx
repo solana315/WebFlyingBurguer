@@ -1,5 +1,5 @@
 import prepara from '../assets/prepara.jpeg'
-import incio from '../assets/incio.jpeg'
+import entregaAve from '../assets/entregaAve.jpeg'
 import pedidos from '../assets/pedidos.jpeg'
 
 
@@ -17,7 +17,7 @@ const steps = [
   {
     title: 'Entrega à Ave',
     text: 'Serve o hambúrguer ao cliente antes que a paciência dele acabe! No Nível 3 as aves ficam extremamente impacientes... e a verdade vem à tona.',
-    img: incio
+    img: entregaAve
   }
 ]
 
