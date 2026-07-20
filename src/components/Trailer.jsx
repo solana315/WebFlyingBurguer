@@ -1,4 +1,5 @@
 import trailer from '../assets/trailer.mp4'
+import trailerphoto from '../assets/trailerphoto.png'
 import { useState } from 'react'
 
 export default function Trailer() {
@@ -16,13 +17,18 @@ export default function Trailer() {
         </div>
         <div className="video-frame mx-auto">
           {isPlaying ? (
-            <video className="video-el" controls autoPlay src={trailer} poster="/trailer-poster.jpg">
+            <video className="video-el" controls autoPlay src={trailer}>
               
             </video>
           ) : (
-            <button className="play-btn" aria-label="Reproduzir trailer" onClick={() => setIsPlaying(true)}>
-              ▶
-            </button>
+            <div
+              className="video-cover"
+              style={{ backgroundImage: `url(${trailerphoto})` }}
+            >
+              <button className="play-btn" aria-label="Reproduzir trailer" onClick={() => setIsPlaying(true)}>
+                ▶
+              </button>
+            </div>
           )}
         </div>
       </div>
