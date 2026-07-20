@@ -1,5 +1,5 @@
-import prepara from '../assets/prepara.jpeg'
-import entregaAve from '../assets/entregaAve.jpeg'
+import prepara from '../assets/prepara.jpg'
+import entregaAve from '../assets/entregaAve.jpg'
 import pedidos from '../assets/pedidos.jpeg'
 
 
