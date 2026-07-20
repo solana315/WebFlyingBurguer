@@ -9,7 +9,7 @@ const team = [
   {
     name: 'Ana Oliveira',
     role: 'Desenvolvimento Web, Unity 3D e Modelação 3D',
-    description: 'Responsável pela criação do website publicitário do Jogo, modelação 3D de alguns personagens no blender e a sua animação e impleentação no Unity.',
+    description: 'Responsável pela criação do website publicitário do Jogo, desenvolvimento das animações e movimentos 3D de alguns personagens no blender e a sua implementação no Unity 3D',
     photo: Ana
   },
   {

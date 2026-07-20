@@ -1,3 +1,4 @@
+import trailer from '../assets/trailer.mp4'
 import { useState } from 'react'
 
 export default function Trailer() {
@@ -15,7 +16,7 @@ export default function Trailer() {
         </div>
         <div className="video-frame mx-auto">
           {isPlaying ? (
-            <video className="video-el" controls autoPlay src="/trailer.mp4" poster="/trailer-poster.jpg">
+            <video className="video-el" controls autoPlay src={trailer} poster="/trailer-poster.jpg">
               
             </video>
           ) : (

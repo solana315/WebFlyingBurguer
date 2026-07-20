@@ -70,7 +70,6 @@ export default function App() {
         <div className="container-xl py-5">
           <div className="row align-items-center gy-5">
             <div className="col-lg-6">
-              <span className="badge rounded-pill bg-warning text-dark px-3 py-2 mb-4">Demo</span>
               <h1 className="display-1 fw-bold text-white lh-sm">FLYING<br />BURGUER</h1>
               <p className="lead text-white-75 mb-4">Faz os hambúrgueres mais deliciosos dos céus e entrega-os aos clientes mais exigentes — as aves! Mas atenção: há um segredo escondido nos ingredientes que só será revelado no último nível...</p>
               <div className="d-flex flex-wrap gap-3">
